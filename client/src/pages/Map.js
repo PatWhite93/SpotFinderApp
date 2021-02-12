@@ -60,11 +60,8 @@ const Map = () => {
                   <div className="marker-title">{spot.body}</div>
                   <div
                     className="marker"
-                    onClick={
-                      () => console.log('Coming soon: open spot details')
-                      // setShowPopup({
-                      //   [spot.id]: true,
-                      // })
+                    onClick={() =>
+                      console.log('Coming soon: open spot details')
                     }
                   >
                     <svg

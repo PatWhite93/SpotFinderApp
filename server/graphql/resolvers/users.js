@@ -54,8 +54,6 @@ module.exports = {
       context,
       info
     ) {
-      //TODO validate user data
-
       const { valid, errors } = validateRegisterInput(
         username,
         email,
@@ -65,9 +63,8 @@ module.exports = {
       if (!valid) {
         throw new UserInputError('Errors', { errors });
       }
-      // const validated = validateRegisterInput(username, email, password, confirmPassword );
-      // if
-      //make sure user doesnt already exist
+
+      // Make sure user doesnt already exist
       const user = await User.findOne({ username });
       if (user) {
         throw new UserInputError('Username is taken', {
@@ -76,7 +73,7 @@ module.exports = {
           },
         });
       }
-      //hash pw and create auth token
+      // Hash pw and create auth token
       password = await argon2.hash(password);
 
       const newUser = new User({
