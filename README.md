@@ -9,7 +9,7 @@ Share your favorite skate spots with friends!
 
 
 ## General info
-A web app where users can create an account to share their favorite skate spots on a map. Use map to zoom into a location, double-click to drop pin.  Add details to posted spots, such as rating, bust-factor, and comments.
+A web app where users can create an account to share their favorite skate spots on a map. Use map to zoom into a location and double-click to drop pin.  Add details to posted spots, such as rating, bust-factor, and comments.
 	
 ## Technologies
 
